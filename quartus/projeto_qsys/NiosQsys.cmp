@@ -1,0 +1,8 @@
+	component NiosQsys is
+		port (
+			clk_clk                        : in  std_logic := 'X'; -- clk
+			rs232_0_external_interface_RXD : in  std_logic := 'X'; -- RXD
+			rs232_0_external_interface_TXD : out std_logic         -- TXD
+		);
+	end component NiosQsys;
+
