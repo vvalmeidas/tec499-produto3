@@ -1,0 +1,30 @@
+//Fazer uma função personalizada que realize a multipicação entre dois inteiros. 
+//Fazer programa assembly para poder testar.
+
+module customMul (result, dataA, dataB)
+input [31:0] dataA;
+input [31:0] dataB;
+
+output [31:0] result;
+
+
+if(dataA == 0 || dataB == 0 )
+	begin
+		result = 0;
+	end
+
+else if(dataA == 1)
+	begin
+		result = dataB;
+	end
+
+else if(dataB == 1)
+	begin
+		result = dataA;
+	end
+else begin	
+	result = dataA * dataB;
+end
+
+
+endmodule
