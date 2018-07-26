@@ -1,0 +1,123 @@
+|vgaController
+clk => clk.IN1
+rst => rst.IN3
+r <= drawPixel:drawPixel.r
+g <= drawPixel:drawPixel.g
+b <= drawPixel:drawPixel.b
+hsync <= syncGen:syncGen.hsync
+vsync <= syncGen:syncGen.vsync
+
+
+|vgaController|clockDivisor:clockDivisor
+clk => clkOut~reg0.CLK
+rst => clkOut.OUTPUTSELECT
+clkOut <= clkOut~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vgaController|syncGen:syncGen
+clk => activeVideo~reg0.CLK
+clk => vsync~reg0.CLK
+clk => hsync~reg0.CLK
+clk => y[0]~reg0.CLK
+clk => y[1]~reg0.CLK
+clk => y[2]~reg0.CLK
+clk => y[3]~reg0.CLK
+clk => y[4]~reg0.CLK
+clk => y[5]~reg0.CLK
+clk => y[6]~reg0.CLK
+clk => y[7]~reg0.CLK
+clk => y[8]~reg0.CLK
+clk => y[9]~reg0.CLK
+clk => x[0]~reg0.CLK
+clk => x[1]~reg0.CLK
+clk => x[2]~reg0.CLK
+clk => x[3]~reg0.CLK
+clk => x[4]~reg0.CLK
+clk => x[5]~reg0.CLK
+clk => x[6]~reg0.CLK
+clk => x[7]~reg0.CLK
+clk => x[8]~reg0.CLK
+clk => x[9]~reg0.CLK
+rst => activeVideo.OUTPUTSELECT
+rst => x.OUTPUTSELECT
+rst => x.OUTPUTSELECT
+rst => x.OUTPUTSELECT
+rst => x.OUTPUTSELECT
+rst => x.OUTPUTSELECT
+rst => x.OUTPUTSELECT
+rst => x.OUTPUTSELECT
+rst => x.OUTPUTSELECT
+rst => x.OUTPUTSELECT
+rst => x.OUTPUTSELECT
+rst => y.OUTPUTSELECT
+rst => y.OUTPUTSELECT
+rst => y.OUTPUTSELECT
+rst => y.OUTPUTSELECT
+rst => y.OUTPUTSELECT
+rst => y.OUTPUTSELECT
+rst => y.OUTPUTSELECT
+rst => y.OUTPUTSELECT
+rst => y.OUTPUTSELECT
+rst => y.OUTPUTSELECT
+rst => hsync.OUTPUTSELECT
+rst => vsync.OUTPUTSELECT
+hsync <= hsync~reg0.DB_MAX_OUTPUT_PORT_TYPE
+vsync <= vsync~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[0] <= x[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[1] <= x[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[2] <= x[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[3] <= x[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[4] <= x[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[5] <= x[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[6] <= x[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[7] <= x[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[8] <= x[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[9] <= x[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[0] <= y[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[4] <= y[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[5] <= y[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[6] <= y[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[7] <= y[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[8] <= y[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[9] <= y[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+activeVideo <= activeVideo~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vgaController|drawPixel:drawPixel
+clk => b~reg0.CLK
+clk => g~reg0.CLK
+clk => r~reg0.CLK
+rst => r.OUTPUTSELECT
+rst => g.OUTPUTSELECT
+rst => b.OUTPUTSELECT
+x[0] => ~NO_FANOUT~
+x[1] => ~NO_FANOUT~
+x[2] => ~NO_FANOUT~
+x[3] => ~NO_FANOUT~
+x[4] => ~NO_FANOUT~
+x[5] => ~NO_FANOUT~
+x[6] => ~NO_FANOUT~
+x[7] => ~NO_FANOUT~
+x[8] => ~NO_FANOUT~
+x[9] => ~NO_FANOUT~
+y[0] => ~NO_FANOUT~
+y[1] => ~NO_FANOUT~
+y[2] => ~NO_FANOUT~
+y[3] => ~NO_FANOUT~
+y[4] => ~NO_FANOUT~
+y[5] => ~NO_FANOUT~
+y[6] => ~NO_FANOUT~
+y[7] => ~NO_FANOUT~
+y[8] => ~NO_FANOUT~
+y[9] => ~NO_FANOUT~
+activeVideo => g.OUTPUTSELECT
+activeVideo => b.OUTPUTSELECT
+activeVideo => r.DATAA
+r <= r~reg0.DB_MAX_OUTPUT_PORT_TYPE
+g <= g~reg0.DB_MAX_OUTPUT_PORT_TYPE
+b <= b~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
