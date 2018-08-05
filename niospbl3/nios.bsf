@@ -1,0 +1,116 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 0 0 528 312)
+	(text "nios" (rect 253 -1 268 11)(font "Arial" (font_size 10)))
+	(text "inst" (rect 8 296 20 308)(font "Arial" ))
+	(port
+		(pt 0 72)
+		(input)
+		(text "clk_clk" (rect 0 0 27 12)(font "Arial" (font_size 8)))
+		(text "clk_clk" (rect 4 61 46 72)(font "Arial" (font_size 8)))
+		(line (pt 0 72)(pt 224 72)(line_width 1))
+	)
+	(port
+		(pt 0 200)
+		(input)
+		(text "rx_data_pio_export[7..0]" (rect 0 0 97 12)(font "Arial" (font_size 8)))
+		(text "rx_data_pio_export[7..0]" (rect 4 189 148 200)(font "Arial" (font_size 8)))
+		(line (pt 0 200)(pt 224 200)(line_width 3))
+	)
+	(port
+		(pt 0 240)
+		(input)
+		(text "rx_ready_pio_export" (rect 0 0 84 12)(font "Arial" (font_size 8)))
+		(text "rx_ready_pio_export" (rect 4 229 118 240)(font "Arial" (font_size 8)))
+		(line (pt 0 240)(pt 224 240)(line_width 1))
+	)
+	(port
+		(pt 0 112)
+		(output)
+		(text "loadvga_0_conduit_end_data[31..0]" (rect 0 0 140 12)(font "Arial" (font_size 8)))
+		(text "loadvga_0_conduit_end_data[31..0]" (rect 4 101 202 112)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 224 112)(line_width 3))
+	)
+	(port
+		(pt 0 128)
+		(output)
+		(text "loadvga_0_conduit_end_wraddress[5..0]" (rect 0 0 161 12)(font "Arial" (font_size 8)))
+		(text "loadvga_0_conduit_end_wraddress[5..0]" (rect 4 117 226 128)(font "Arial" (font_size 8)))
+		(line (pt 0 128)(pt 224 128)(line_width 3))
+	)
+	(port
+		(pt 0 144)
+		(output)
+		(text "loadvga_0_conduit_end_wren" (rect 0 0 119 12)(font "Arial" (font_size 8)))
+		(text "loadvga_0_conduit_end_wren" (rect 4 133 160 144)(font "Arial" (font_size 8)))
+		(line (pt 0 144)(pt 224 144)(line_width 1))
+	)
+	(port
+		(pt 0 160)
+		(output)
+		(text "loadvga_0_conduit_end_memorySel" (rect 0 0 147 12)(font "Arial" (font_size 8)))
+		(text "loadvga_0_conduit_end_memorySel" (rect 4 149 190 160)(font "Arial" (font_size 8)))
+		(line (pt 0 160)(pt 224 160)(line_width 1))
+	)
+	(port
+		(pt 0 280)
+		(output)
+		(text "rx_ready_clr_pio_export" (rect 0 0 100 12)(font "Arial" (font_size 8)))
+		(text "rx_ready_clr_pio_export" (rect 4 269 142 280)(font "Arial" (font_size 8)))
+		(line (pt 0 280)(pt 224 280)(line_width 1))
+	)
+	(drawing
+		(text "clk" (rect 209 43 436 99)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "clk" (rect 229 67 476 144)(font "Arial" (color 0 0 0)))
+		(text "loadvga_0_conduit_end" (rect 88 83 302 179)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "data" (rect 229 107 482 224)(font "Arial" (color 0 0 0)))
+		(text "wraddress" (rect 229 123 512 256)(font "Arial" (color 0 0 0)))
+		(text "wren" (rect 229 139 482 288)(font "Arial" (color 0 0 0)))
+		(text "memorySel" (rect 229 155 512 320)(font "Arial" (color 0 0 0)))
+		(text "rx_data_pio" (rect 156 171 378 355)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 229 195 494 400)(font "Arial" (color 0 0 0)))
+		(text "rx_ready_pio" (rect 149 211 370 435)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 229 235 494 480)(font "Arial" (color 0 0 0)))
+		(text "rx_ready_clr_pio" (rect 127 251 350 515)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 229 275 494 560)(font "Arial" (color 0 0 0)))
+		(text " nios " (rect 508 296 1052 602)(font "Arial" ))
+		(line (pt 225 52)(pt 225 76)(line_width 1))
+		(line (pt 226 52)(pt 226 76)(line_width 1))
+		(line (pt 225 92)(pt 225 164)(line_width 1))
+		(line (pt 226 92)(pt 226 164)(line_width 1))
+		(line (pt 225 180)(pt 225 204)(line_width 1))
+		(line (pt 226 180)(pt 226 204)(line_width 1))
+		(line (pt 225 220)(pt 225 244)(line_width 1))
+		(line (pt 226 220)(pt 226 244)(line_width 1))
+		(line (pt 225 260)(pt 225 284)(line_width 1))
+		(line (pt 226 260)(pt 226 284)(line_width 1))
+		(line (pt 224 32)(pt 304 32)(line_width 1))
+		(line (pt 304 32)(pt 304 296)(line_width 1))
+		(line (pt 224 296)(pt 304 296)(line_width 1))
+		(line (pt 224 32)(pt 224 296)(line_width 1))
+		(line (pt 0 0)(pt 528 0)(line_width 1))
+		(line (pt 528 0)(pt 528 312)(line_width 1))
+		(line (pt 0 312)(pt 528 312)(line_width 1))
+		(line (pt 0 0)(pt 0 312)(line_width 1))
+	)
+)

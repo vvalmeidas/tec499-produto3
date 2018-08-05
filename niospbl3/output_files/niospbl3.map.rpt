@@ -1,0 +1,674 @@
+Analysis & Synthesis report for niospbl3
+Sat Aug 04 18:40:55 2018
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Port Connectivity Checks: "convolucao:conv"
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
+ 13. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sat Aug 04 18:40:55 2018           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; niospbl3                                        ;
+; Top-level Entity Name              ; sobOpTOP                                        ;
+; Family                             ; Cyclone IV E                                    ;
+; Total logic elements               ; 7                                               ;
+;     Total combinational functions  ; 7                                               ;
+;     Dedicated logic registers      ; 7                                               ;
+; Total registers                    ; 7                                               ;
+; Total pins                         ; 9                                               ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE6E22C7        ;                    ;
+; Top-level entity name                                                      ; sobOpTOP           ; niospbl3           ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                    ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                      ; Library ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------+---------+
+; convolucao.v                     ; yes             ; User Verilog HDL File  ; C:/Users/Vinicius/Documents/niospbl3/convolucao.v ;         ;
+; sobOpTOP.v                       ; yes             ; User Verilog HDL File  ; C:/Users/Vinicius/Documents/niospbl3/sobOpTOP.v   ;         ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 7         ;
+;                                             ;           ;
+; Total combinational functions               ; 7         ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 0         ;
+;     -- 3 input functions                    ; 1         ;
+;     -- <=2 input functions                  ; 6         ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 2         ;
+;     -- arithmetic mode                      ; 5         ;
+;                                             ;           ;
+; Total registers                             ; 7         ;
+;     -- Dedicated logic registers            ; 7         ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 9         ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 7         ;
+; Total fan-out                               ; 43        ;
+; Average fan-out                             ; 1.34      ;
++---------------------------------------------+-----------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                               ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name       ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------+--------------+
+; |sobOpTOP                  ; 7 (0)             ; 7 (0)        ; 0           ; 0            ; 0       ; 0         ; 9    ; 0            ; |sobOpTOP                 ; work         ;
+;    |convolucao:conv|       ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sobOpTOP|convolucao:conv ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                ;
++---------------------------------------+-------------------------------------------+
+; Register name                         ; Reason for Removal                        ;
++---------------------------------------+-------------------------------------------+
+; convolucao:conv|vertical[7]           ; Merged with convolucao:conv|horizontal[7] ;
+; convolucao:conv|vertical[6]           ; Merged with convolucao:conv|horizontal[6] ;
+; convolucao:conv|vertical[5]           ; Merged with convolucao:conv|horizontal[5] ;
+; convolucao:conv|vertical[4]           ; Merged with convolucao:conv|horizontal[4] ;
+; convolucao:conv|vertical[3]           ; Merged with convolucao:conv|horizontal[3] ;
+; convolucao:conv|vertical[2]           ; Merged with convolucao:conv|horizontal[2] ;
+; convolucao:conv|vertical[1]           ; Merged with convolucao:conv|horizontal[1] ;
+; convolucao:conv|vertical[0]           ; Merged with convolucao:conv|horizontal[0] ;
+; convolucao:conv|horizontal[7]         ; Lost fanout                               ;
+; Total Number of Removed Registers = 9 ;                                           ;
++---------------------------------------+-------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 7     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Port Connectivity Checks: "convolucao:conv"      ;
++----------------+-------+----------+--------------+
+; Port           ; Type  ; Severity ; Details      ;
++----------------+-------+----------+--------------+
+; linha1[18..16] ; Input ; Info     ; Stuck at VCC ;
+; linha1[14..13] ; Input ; Info     ; Stuck at VCC ;
+; linha1[8..5]   ; Input ; Info     ; Stuck at VCC ;
+; linha1[20..19] ; Input ; Info     ; Stuck at GND ;
+; linha1[12..11] ; Input ; Info     ; Stuck at GND ;
+; linha1[2..1]   ; Input ; Info     ; Stuck at GND ;
+; linha1[23]     ; Input ; Info     ; Stuck at VCC ;
+; linha1[22]     ; Input ; Info     ; Stuck at GND ;
+; linha1[21]     ; Input ; Info     ; Stuck at VCC ;
+; linha1[15]     ; Input ; Info     ; Stuck at GND ;
+; linha1[10]     ; Input ; Info     ; Stuck at VCC ;
+; linha1[9]      ; Input ; Info     ; Stuck at GND ;
+; linha1[4]      ; Input ; Info     ; Stuck at GND ;
+; linha1[3]      ; Input ; Info     ; Stuck at VCC ;
+; linha1[0]      ; Input ; Info     ; Stuck at VCC ;
+; linha2[23..17] ; Input ; Info     ; Stuck at VCC ;
+; linha2[8..5]   ; Input ; Info     ; Stuck at VCC ;
+; linha2[16..13] ; Input ; Info     ; Stuck at GND ;
+; linha2[2..0]   ; Input ; Info     ; Stuck at GND ;
+; linha2[12]     ; Input ; Info     ; Stuck at VCC ;
+; linha2[11]     ; Input ; Info     ; Stuck at GND ;
+; linha2[10]     ; Input ; Info     ; Stuck at VCC ;
+; linha2[9]      ; Input ; Info     ; Stuck at GND ;
+; linha2[4]      ; Input ; Info     ; Stuck at GND ;
+; linha2[3]      ; Input ; Info     ; Stuck at VCC ;
+; linha3[20..18] ; Input ; Info     ; Stuck at VCC ;
+; linha3[16..15] ; Input ; Info     ; Stuck at VCC ;
+; linha3[10..9]  ; Input ; Info     ; Stuck at VCC ;
+; linha3[7..3]   ; Input ; Info     ; Stuck at VCC ;
+; linha3[23..21] ; Input ; Info     ; Stuck at GND ;
+; linha3[12..11] ; Input ; Info     ; Stuck at GND ;
+; linha3[2..1]   ; Input ; Info     ; Stuck at GND ;
+; linha3[17]     ; Input ; Info     ; Stuck at GND ;
+; linha3[14]     ; Input ; Info     ; Stuck at GND ;
+; linha3[13]     ; Input ; Info     ; Stuck at VCC ;
+; linha3[8]      ; Input ; Info     ; Stuck at GND ;
+; linha3[0]      ; Input ; Info     ; Stuck at VCC ;
++----------------+-------+----------+--------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sat Aug 04 18:40:24 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off niospbl3 -c niospbl3
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12248): Elaborating Qsys system entity "nios.qsys"
+Info (12250): 2018.08.04.17:40:30 Progress: Loading niospbl3/nios.qsys
+Info (12250): 2018.08.04.17:40:30 Progress: Reading input file
+Info (12250): 2018.08.04.17:40:30 Progress: Adding clk_0 [clock_source 13.0]
+Info (12250): 2018.08.04.17:40:30 Progress: Parameterizing module clk_0
+Info (12250): 2018.08.04.17:40:30 Progress: Adding nios2_qsys_0 [altera_nios2_qsys 13.0]
+Info (12250): 2018.08.04.17:40:31 Progress: Parameterizing module nios2_qsys_0
+Info (12250): 2018.08.04.17:40:31 Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 13.0.1.99.2]
+Info (12250): 2018.08.04.17:40:31 Progress: Parameterizing module onchip_memory2_0
+Info (12250): 2018.08.04.17:40:31 Progress: Adding loadVga_0 [loadVga 1.0]
+Info (12250): 2018.08.04.17:40:32 Progress: Parameterizing module loadVga_0
+Info (12250): 2018.08.04.17:40:32 Progress: Adding rx_data_pio [altera_avalon_pio 13.0.1.99.2]
+Info (12250): 2018.08.04.17:40:32 Progress: Parameterizing module rx_data_pio
+Info (12250): 2018.08.04.17:40:32 Progress: Adding rx_ready_pio [altera_avalon_pio 13.0.1.99.2]
+Info (12250): 2018.08.04.17:40:32 Progress: Parameterizing module rx_ready_pio
+Info (12250): 2018.08.04.17:40:32 Progress: Adding rx_ready_clr_pio [altera_avalon_pio 13.0.1.99.2]
+Info (12250): 2018.08.04.17:40:32 Progress: Parameterizing module rx_ready_clr_pio
+Info (12250): 2018.08.04.17:40:32 Progress: Building connections
+Info (12250): 2018.08.04.17:40:32 Progress: Parameterizing connections
+Info (12250): 2018.08.04.17:40:32 Progress: Validating
+Info (12250): 2018.08.04.17:40:33 Progress: Done reading input file
+Info (12250): Nios.rx_data_pio: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info (12250): Nios.rx_ready_pio: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info (12250): Nios: Generating nios "nios" for QUARTUS_SYNTH
+Info (12250): Pipeline_bridge_swap_transform: After transform: 7 modules, 27 connections
+Info (12250): Merlin_custom_instruction_transform: After transform: 10 modules, 30 connections
+Info (12250): Merlin_translator_transform: After transform: 17 modules, 58 connections
+Info (12250): Merlin_domain_transform: After transform: 30 modules, 141 connections
+Info (12250): Merlin_router_transform: After transform: 37 modules, 169 connections
+Info (12250): Reset_adaptation_transform: After transform: 38 modules, 134 connections
+Info (12250): Merlin_network_to_switch_transform: After transform: 51 modules, 168 connections
+Info (12250): Merlin_mm_transform: After transform: 51 modules, 168 connections
+Info (12250): Merlin_interrupt_mapper_transform: After transform: 52 modules, 171 connections
+Warning (12251): Nios: "No matching role found for nios2_qsys_0_custom_instruction_master_multi_xconnect:ci_slave:ci_slave_ipending (ipending)"
+Warning (12251): Nios: "No matching role found for nios2_qsys_0_custom_instruction_master_multi_xconnect:ci_slave:ci_slave_estatus (estatus)"
+Warning (12251): Nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Info (12250): Nios2_qsys_0: Starting RTL generation for module 'nios_nios2_qsys_0'
+Info (12250): Nios2_qsys_0:   Generation command is [exec C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/eperl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/cpu_lib -I C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/nios_lib -I C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2 -I C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2 -- C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/generate_rtl.epl --name=nios_nios2_qsys_0 --dir=C:/Users/Vinicius/AppData/Local/Temp/alt7747_4499348802089932929.dir/0001_nios2_qsys_0_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/Vinicius/AppData/Local/Temp/alt7747_4499348802089932929.dir/0001_nios2_qsys_0_gen//nios_nios2_qsys_0_processor_configuration.pl  --do_build_sim=0    --bogus  ]
+Info (12250): Nios2_qsys_0: # 2018.08.04 18:40:40 (*) Starting Nios II generation
+Info (12250): Nios2_qsys_0: # 2018.08.04 18:40:40 (*)   Checking for plaintext license.
+Info (12250): Nios2_qsys_0: # 2018.08.04 18:40:41 (*)   Couldn't query license setup in Quartus directory C:/altera/13.0sp1/quartus
+Info (12250): Nios2_qsys_0: # 2018.08.04 18:40:41 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info (12250): Nios2_qsys_0: # 2018.08.04 18:40:41 (*)   LM_LICENSE_FILE environment variable is empty
+Info (12250): Nios2_qsys_0: # 2018.08.04 18:40:41 (*)   Plaintext license not found.
+Info (12250): Nios2_qsys_0: # 2018.08.04 18:40:41 (*)   No license required to generate encrypted Nios II/e.
+Info (12250): Nios2_qsys_0: # 2018.08.04 18:40:41 (*)   Elaborating CPU configuration settings
+Info (12250): Nios2_qsys_0: # 2018.08.04 18:40:41 (*)   Creating all objects for CPU
+Info (12250): Nios2_qsys_0: # 2018.08.04 18:40:43 (*)   Generating RTL from CPU objects
+Info (12250): Nios2_qsys_0: # 2018.08.04 18:40:43 (*)   Creating plain-text RTL
+Info (12250): Nios2_qsys_0: # 2018.08.04 18:40:46 (*) Done Nios II generation
+Info (12250): Nios2_qsys_0: Done RTL generation for module 'nios_nios2_qsys_0'
+Info (12250): Nios2_qsys_0: "nios" instantiated altera_nios2_qsys "nios2_qsys_0"
+Info (12250): Onchip_memory2_0: Starting RTL generation for module 'nios_onchip_memory2_0'
+Info (12250): Onchip_memory2_0:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=nios_onchip_memory2_0 --dir=C:/Users/Vinicius/AppData/Local/Temp/alt7747_4499348802089932929.dir/0002_onchip_memory2_0_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/Vinicius/AppData/Local/Temp/alt7747_4499348802089932929.dir/0002_onchip_memory2_0_gen//nios_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Onchip_memory2_0: Done RTL generation for module 'nios_onchip_memory2_0'
+Info (12250): Onchip_memory2_0: "nios" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
+Info (12250): LoadVga_0: "nios" instantiated loadVga "loadVga_0"
+Info (12250): Rx_data_pio: Starting RTL generation for module 'nios_rx_data_pio'
+Info (12250): Rx_data_pio:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nios_rx_data_pio --dir=C:/Users/Vinicius/AppData/Local/Temp/alt7747_4499348802089932929.dir/0004_rx_data_pio_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/Vinicius/AppData/Local/Temp/alt7747_4499348802089932929.dir/0004_rx_data_pio_gen//nios_rx_data_pio_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Rx_data_pio: Done RTL generation for module 'nios_rx_data_pio'
+Info (12250): Rx_data_pio: "nios" instantiated altera_avalon_pio "rx_data_pio"
+Info (12250): Rx_ready_pio: Starting RTL generation for module 'nios_rx_ready_pio'
+Info (12250): Rx_ready_pio:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nios_rx_ready_pio --dir=C:/Users/Vinicius/AppData/Local/Temp/alt7747_4499348802089932929.dir/0005_rx_ready_pio_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/Vinicius/AppData/Local/Temp/alt7747_4499348802089932929.dir/0005_rx_ready_pio_gen//nios_rx_ready_pio_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Rx_ready_pio: Done RTL generation for module 'nios_rx_ready_pio'
+Info (12250): Rx_ready_pio: "nios" instantiated altera_avalon_pio "rx_ready_pio"
+Info (12250): Rx_ready_clr_pio: Starting RTL generation for module 'nios_rx_ready_clr_pio'
+Info (12250): Rx_ready_clr_pio:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nios_rx_ready_clr_pio --dir=C:/Users/Vinicius/AppData/Local/Temp/alt7747_4499348802089932929.dir/0006_rx_ready_clr_pio_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/Vinicius/AppData/Local/Temp/alt7747_4499348802089932929.dir/0006_rx_ready_clr_pio_gen//nios_rx_ready_clr_pio_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Rx_ready_clr_pio: Done RTL generation for module 'nios_rx_ready_clr_pio'
+Info (12250): Rx_ready_clr_pio: "nios" instantiated altera_avalon_pio "rx_ready_clr_pio"
+Info (12250): Nios2_qsys_0_custom_instruction_master_translator: "nios" instantiated altera_customins_master_translator "nios2_qsys_0_custom_instruction_master_translator"
+Info (12250): Nios2_qsys_0_custom_instruction_master_multi_xconnect: "nios" instantiated altera_customins_xconnect "nios2_qsys_0_custom_instruction_master_multi_xconnect"
+Info (12250): Nios2_qsys_0_custom_instruction_master_multi_slave_translator0: "nios" instantiated altera_customins_slave_translator "nios2_qsys_0_custom_instruction_master_multi_slave_translator0"
+Info (12250): Nios2_qsys_0_instruction_master_translator: "nios" instantiated altera_merlin_master_translator "nios2_qsys_0_instruction_master_translator"
+Info (12250): Nios2_qsys_0_jtag_debug_module_translator: "nios" instantiated altera_merlin_slave_translator "nios2_qsys_0_jtag_debug_module_translator"
+Info (12250): Nios2_qsys_0_instruction_master_translator_avalon_universal_master_0_agent: "nios" instantiated altera_merlin_master_agent "nios2_qsys_0_instruction_master_translator_avalon_universal_master_0_agent"
+Info (12250): Nios2_qsys_0_jtag_debug_module_translator_avalon_universal_slave_0_agent: "nios" instantiated altera_merlin_slave_agent "nios2_qsys_0_jtag_debug_module_translator_avalon_universal_slave_0_agent"
+Info (12250): Nios2_qsys_0_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo: "nios" instantiated altera_avalon_sc_fifo "nios2_qsys_0_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo"
+Info (12250): Addr_router: "nios" instantiated altera_merlin_router "addr_router"
+Info (12250): Id_router: "nios" instantiated altera_merlin_router "id_router"
+Info (12250): Rst_controller: "nios" instantiated altera_reset_controller "rst_controller"
+Info (12250): Cmd_xbar_demux: "nios" instantiated altera_merlin_demultiplexer "cmd_xbar_demux"
+Info (12250): Cmd_xbar_mux: "nios" instantiated altera_merlin_multiplexer "cmd_xbar_mux"
+Info (12250): Rsp_xbar_demux: "nios" instantiated altera_merlin_demultiplexer "rsp_xbar_demux"
+Info (12250): Rsp_xbar_mux: "nios" instantiated altera_merlin_multiplexer "rsp_xbar_mux"
+Info (12250): Reusing file C:/Users/Vinicius/Documents/niospbl3/db/ip/nios/submodules/altera_merlin_arbitrator.sv
+Info (12250): Irq_mapper: "nios" instantiated altera_irq_mapper "irq_mapper"
+Info (12250): Nios: Done nios" with 23 modules, 75 files, 1361846 bytes
+Info (12249): Finished elaborating Qsys system entity "nios.qsys"
+Info (12021): Found 1 design units, including 1 entities, in source file verilog/uart/uart.v
+    Info (12023): Found entity 1: uart
+Info (12021): Found 1 design units, including 1 entities, in source file verilog/uart/transmitter.v
+    Info (12023): Found entity 1: transmitter
+Info (12021): Found 1 design units, including 1 entities, in source file verilog/uart/receiver.v
+    Info (12023): Found entity 1: receiver
+Info (12021): Found 1 design units, including 1 entities, in source file verilog/uart/baud_rate_gen.v
+    Info (12023): Found entity 1: baud_rate_gen
+Info (12021): Found 1 design units, including 1 entities, in source file nios/synthesis/submodules/nios_rx_ready_pio.v
+    Info (12023): Found entity 1: nios_rx_ready_pio
+Info (12021): Found 1 design units, including 1 entities, in source file nios/synthesis/submodules/nios_rx_ready_clr_pio.v
+    Info (12023): Found entity 1: nios_rx_ready_clr_pio
+Info (12021): Found 1 design units, including 1 entities, in source file nios/synthesis/submodules/nios_rx_data_pio.v
+    Info (12023): Found entity 1: nios_rx_data_pio
+Info (12021): Found 1 design units, including 1 entities, in source file nios/synthesis/submodules/nios_rsp_xbar_mux.sv
+    Info (12023): Found entity 1: nios_rsp_xbar_mux
+Info (12021): Found 1 design units, including 1 entities, in source file nios/synthesis/submodules/nios_rsp_xbar_demux.sv
+    Info (12023): Found entity 1: nios_rsp_xbar_demux
+Info (12021): Found 1 design units, including 1 entities, in source file nios/synthesis/submodules/nios_onchip_memory2_0.v
+    Info (12023): Found entity 1: nios_onchip_memory2_0
+Info (12021): Found 1 design units, including 1 entities, in source file nios/synthesis/submodules/nios_nios2_qsys_0_test_bench.v
+    Info (12023): Found entity 1: nios_nios2_qsys_0_test_bench
+Info (12021): Found 1 design units, including 1 entities, in source file nios/synthesis/submodules/nios_nios2_qsys_0_oci_test_bench.v
+    Info (12023): Found entity 1: nios_nios2_qsys_0_oci_test_bench
+Info (12021): Found 1 design units, including 1 entities, in source file nios/synthesis/submodules/nios_nios2_qsys_0_jtag_debug_module_wrapper.v
+    Info (12023): Found entity 1: nios_nios2_qsys_0_jtag_debug_module_wrapper
+Info (12021): Found 1 design units, including 1 entities, in source file nios/synthesis/submodules/nios_nios2_qsys_0_jtag_debug_module_tck.v
+    Info (12023): Found entity 1: nios_nios2_qsys_0_jtag_debug_module_tck
+Info (12021): Found 1 design units, including 1 entities, in source file nios/synthesis/submodules/nios_nios2_qsys_0_jtag_debug_module_sysclk.v
+    Info (12023): Found entity 1: nios_nios2_qsys_0_jtag_debug_module_sysclk
+Info (12021): Found 1 design units, including 1 entities, in source file nios/synthesis/submodules/nios_nios2_qsys_0_custom_instruction_master_multi_xconnect.sv
+    Info (12023): Found entity 1: nios_nios2_qsys_0_custom_instruction_master_multi_xconnect
+Info (12021): Found 21 design units, including 21 entities, in source file nios/synthesis/submodules/nios_nios2_qsys_0.v
+    Info (12023): Found entity 1: nios_nios2_qsys_0_register_bank_a_module
+    Info (12023): Found entity 2: nios_nios2_qsys_0_register_bank_b_module
+    Info (12023): Found entity 3: nios_nios2_qsys_0_nios2_oci_debug
+    Info (12023): Found entity 4: nios_nios2_qsys_0_ociram_sp_ram_module
+    Info (12023): Found entity 5: nios_nios2_qsys_0_nios2_ocimem
+    Info (12023): Found entity 6: nios_nios2_qsys_0_nios2_avalon_reg
+    Info (12023): Found entity 7: nios_nios2_qsys_0_nios2_oci_break
+    Info (12023): Found entity 8: nios_nios2_qsys_0_nios2_oci_xbrk
+    Info (12023): Found entity 9: nios_nios2_qsys_0_nios2_oci_dbrk
+    Info (12023): Found entity 10: nios_nios2_qsys_0_nios2_oci_itrace
+    Info (12023): Found entity 11: nios_nios2_qsys_0_nios2_oci_td_mode
+    Info (12023): Found entity 12: nios_nios2_qsys_0_nios2_oci_dtrace
+    Info (12023): Found entity 13: nios_nios2_qsys_0_nios2_oci_compute_tm_count
+    Info (12023): Found entity 14: nios_nios2_qsys_0_nios2_oci_fifowp_inc
+    Info (12023): Found entity 15: nios_nios2_qsys_0_nios2_oci_fifocount_inc
+    Info (12023): Found entity 16: nios_nios2_qsys_0_nios2_oci_fifo
+    Info (12023): Found entity 17: nios_nios2_qsys_0_nios2_oci_pib
+    Info (12023): Found entity 18: nios_nios2_qsys_0_nios2_oci_im
+    Info (12023): Found entity 19: nios_nios2_qsys_0_nios2_performance_monitors
+    Info (12023): Found entity 20: nios_nios2_qsys_0_nios2_oci
+    Info (12023): Found entity 21: nios_nios2_qsys_0
+Info (12021): Found 1 design units, including 1 entities, in source file nios/synthesis/submodules/nios_irq_mapper.sv
+    Info (12023): Found entity 1: nios_irq_mapper
+Info (12021): Found 2 design units, including 2 entities, in source file nios/synthesis/submodules/nios_id_router.sv
+    Info (12023): Found entity 1: nios_id_router_default_decode
+    Info (12023): Found entity 2: nios_id_router
+Info (12021): Found 1 design units, including 1 entities, in source file nios/synthesis/submodules/nios_cmd_xbar_mux.sv
+    Info (12023): Found entity 1: nios_cmd_xbar_mux
+Info (12021): Found 1 design units, including 1 entities, in source file nios/synthesis/submodules/nios_cmd_xbar_demux.sv
+    Info (12023): Found entity 1: nios_cmd_xbar_demux
+Info (12021): Found 2 design units, including 2 entities, in source file nios/synthesis/submodules/nios_addr_router.sv
+    Info (12023): Found entity 1: nios_addr_router_default_decode
+    Info (12023): Found entity 2: nios_addr_router
+Info (12021): Found 1 design units, including 1 entities, in source file nios/synthesis/submodules/loadvga.v
+    Info (12023): Found entity 1: loadVga
+Info (12021): Found 1 design units, including 1 entities, in source file nios/synthesis/submodules/altera_reset_synchronizer.v
+    Info (12023): Found entity 1: altera_reset_synchronizer
+Info (12021): Found 1 design units, including 1 entities, in source file nios/synthesis/submodules/altera_reset_controller.v
+    Info (12023): Found entity 1: altera_reset_controller
+Info (12021): Found 1 design units, including 1 entities, in source file nios/synthesis/submodules/altera_merlin_slave_translator.sv
+    Info (12023): Found entity 1: altera_merlin_slave_translator
+Info (12021): Found 1 design units, including 1 entities, in source file nios/synthesis/submodules/altera_merlin_slave_agent.sv
+    Info (12023): Found entity 1: altera_merlin_slave_agent
+Info (12021): Found 1 design units, including 1 entities, in source file nios/synthesis/submodules/altera_merlin_master_translator.sv
+    Info (12023): Found entity 1: altera_merlin_master_translator
+Info (12021): Found 1 design units, including 1 entities, in source file nios/synthesis/submodules/altera_merlin_master_agent.sv
+    Info (12023): Found entity 1: altera_merlin_master_agent
+Info (12021): Found 1 design units, including 1 entities, in source file nios/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+    Info (12023): Found entity 1: altera_merlin_burst_uncompressor
+Info (12021): Found 2 design units, including 2 entities, in source file nios/synthesis/submodules/altera_merlin_arbitrator.sv
+    Info (12023): Found entity 1: altera_merlin_arbitrator
+    Info (12023): Found entity 2: altera_merlin_arb_adder
+Info (12021): Found 1 design units, including 1 entities, in source file nios/synthesis/submodules/altera_customins_slave_translator.sv
+    Info (12023): Found entity 1: altera_customins_slave_translator
+Info (12021): Found 1 design units, including 1 entities, in source file nios/synthesis/submodules/altera_customins_master_translator.v
+    Info (12023): Found entity 1: altera_customins_master_translator
+Info (12021): Found 1 design units, including 1 entities, in source file nios/synthesis/submodules/altera_avalon_sc_fifo.v
+    Info (12023): Found entity 1: altera_avalon_sc_fifo
+Info (12021): Found 1 design units, including 1 entities, in source file vgacontroller.v
+    Info (12023): Found entity 1: vgaController
+Info (12021): Found 1 design units, including 1 entities, in source file syncgen.v
+    Info (12023): Found entity 1: syncGen
+Info (12021): Found 1 design units, including 1 entities, in source file drawpixel.v
+    Info (12023): Found entity 1: drawPixel
+Info (12021): Found 1 design units, including 1 entities, in source file clockdivisor.v
+    Info (12023): Found entity 1: clockDivisor
+Info (12021): Found 1 design units, including 1 entities, in source file nios/synthesis/nios.v
+    Info (12023): Found entity 1: nios
+Info (12021): Found 1 design units, including 1 entities, in source file niospbl3.v
+    Info (12023): Found entity 1: niospbl3
+Info (12021): Found 1 design units, including 1 entities, in source file memory32.v
+    Info (12023): Found entity 1: memory32
+Info (12021): Found 1 design units, including 1 entities, in source file memory64.v
+    Info (12023): Found entity 1: memory64
+Info (12021): Found 1 design units, including 1 entities, in source file sobelop.v
+    Info (12023): Found entity 1: sobelOp
+Info (12021): Found 1 design units, including 1 entities, in source file convolucao.v
+    Info (12023): Found entity 1: convolucao
+Info (12021): Found 1 design units, including 1 entities, in source file soboptop.v
+    Info (12023): Found entity 1: sobOpTOP
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios/nios.v
+    Info (12023): Found entity 1: nios
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios/submodules/altera_avalon_sc_fifo.v
+    Info (12023): Found entity 1: altera_avalon_sc_fifo
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios/submodules/altera_customins_master_translator.v
+    Info (12023): Found entity 1: altera_customins_master_translator
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios/submodules/altera_customins_slave_translator.sv
+    Info (12023): Found entity 1: altera_customins_slave_translator
+Info (12021): Found 2 design units, including 2 entities, in source file db/ip/nios/submodules/altera_merlin_arbitrator.sv
+    Info (12023): Found entity 1: altera_merlin_arbitrator
+    Info (12023): Found entity 2: altera_merlin_arb_adder
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios/submodules/altera_merlin_burst_uncompressor.sv
+    Info (12023): Found entity 1: altera_merlin_burst_uncompressor
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios/submodules/altera_merlin_master_agent.sv
+    Info (12023): Found entity 1: altera_merlin_master_agent
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios/submodules/altera_merlin_master_translator.sv
+    Info (12023): Found entity 1: altera_merlin_master_translator
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios/submodules/altera_merlin_slave_agent.sv
+    Info (12023): Found entity 1: altera_merlin_slave_agent
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios/submodules/altera_merlin_slave_translator.sv
+    Info (12023): Found entity 1: altera_merlin_slave_translator
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios/submodules/altera_reset_controller.v
+    Info (12023): Found entity 1: altera_reset_controller
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios/submodules/altera_reset_synchronizer.v
+    Info (12023): Found entity 1: altera_reset_synchronizer
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios/submodules/loadvga.v
+    Info (12023): Found entity 1: loadVga
+Info (12021): Found 2 design units, including 2 entities, in source file db/ip/nios/submodules/nios_addr_router.sv
+    Info (12023): Found entity 1: nios_addr_router_default_decode
+    Info (12023): Found entity 2: nios_addr_router
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios/submodules/nios_cmd_xbar_demux.sv
+    Info (12023): Found entity 1: nios_cmd_xbar_demux
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios/submodules/nios_cmd_xbar_mux.sv
+    Info (12023): Found entity 1: nios_cmd_xbar_mux
+Info (12021): Found 2 design units, including 2 entities, in source file db/ip/nios/submodules/nios_id_router.sv
+    Info (12023): Found entity 1: nios_id_router_default_decode
+    Info (12023): Found entity 2: nios_id_router
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios/submodules/nios_irq_mapper.sv
+    Info (12023): Found entity 1: nios_irq_mapper
+Info (12021): Found 21 design units, including 21 entities, in source file db/ip/nios/submodules/nios_nios2_qsys_0.v
+    Info (12023): Found entity 1: nios_nios2_qsys_0_register_bank_a_module
+    Info (12023): Found entity 2: nios_nios2_qsys_0_register_bank_b_module
+    Info (12023): Found entity 3: nios_nios2_qsys_0_nios2_oci_debug
+    Info (12023): Found entity 4: nios_nios2_qsys_0_ociram_sp_ram_module
+    Info (12023): Found entity 5: nios_nios2_qsys_0_nios2_ocimem
+    Info (12023): Found entity 6: nios_nios2_qsys_0_nios2_avalon_reg
+    Info (12023): Found entity 7: nios_nios2_qsys_0_nios2_oci_break
+    Info (12023): Found entity 8: nios_nios2_qsys_0_nios2_oci_xbrk
+    Info (12023): Found entity 9: nios_nios2_qsys_0_nios2_oci_dbrk
+    Info (12023): Found entity 10: nios_nios2_qsys_0_nios2_oci_itrace
+    Info (12023): Found entity 11: nios_nios2_qsys_0_nios2_oci_td_mode
+    Info (12023): Found entity 12: nios_nios2_qsys_0_nios2_oci_dtrace
+    Info (12023): Found entity 13: nios_nios2_qsys_0_nios2_oci_compute_tm_count
+    Info (12023): Found entity 14: nios_nios2_qsys_0_nios2_oci_fifowp_inc
+    Info (12023): Found entity 15: nios_nios2_qsys_0_nios2_oci_fifocount_inc
+    Info (12023): Found entity 16: nios_nios2_qsys_0_nios2_oci_fifo
+    Info (12023): Found entity 17: nios_nios2_qsys_0_nios2_oci_pib
+    Info (12023): Found entity 18: nios_nios2_qsys_0_nios2_oci_im
+    Info (12023): Found entity 19: nios_nios2_qsys_0_nios2_performance_monitors
+    Info (12023): Found entity 20: nios_nios2_qsys_0_nios2_oci
+    Info (12023): Found entity 21: nios_nios2_qsys_0
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios/submodules/nios_nios2_qsys_0_custom_instruction_master_multi_xconnect.sv
+    Info (12023): Found entity 1: nios_nios2_qsys_0_custom_instruction_master_multi_xconnect
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios/submodules/nios_nios2_qsys_0_jtag_debug_module_sysclk.v
+    Info (12023): Found entity 1: nios_nios2_qsys_0_jtag_debug_module_sysclk
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios/submodules/nios_nios2_qsys_0_jtag_debug_module_tck.v
+    Info (12023): Found entity 1: nios_nios2_qsys_0_jtag_debug_module_tck
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios/submodules/nios_nios2_qsys_0_jtag_debug_module_wrapper.v
+    Info (12023): Found entity 1: nios_nios2_qsys_0_jtag_debug_module_wrapper
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios/submodules/nios_nios2_qsys_0_oci_test_bench.v
+    Info (12023): Found entity 1: nios_nios2_qsys_0_oci_test_bench
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios/submodules/nios_nios2_qsys_0_test_bench.v
+    Info (12023): Found entity 1: nios_nios2_qsys_0_test_bench
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios/submodules/nios_onchip_memory2_0.v
+    Info (12023): Found entity 1: nios_onchip_memory2_0
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios/submodules/nios_rsp_xbar_demux.sv
+    Info (12023): Found entity 1: nios_rsp_xbar_demux
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios/submodules/nios_rsp_xbar_mux.sv
+    Info (12023): Found entity 1: nios_rsp_xbar_mux
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios/submodules/nios_rx_data_pio.v
+    Info (12023): Found entity 1: nios_rx_data_pio
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios/submodules/nios_rx_ready_clr_pio.v
+    Info (12023): Found entity 1: nios_rx_ready_clr_pio
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios/submodules/nios_rx_ready_pio.v
+    Info (12023): Found entity 1: nios_rx_ready_pio
+Info (12127): Elaborating entity "sobOpTOP" for the top level hierarchy
+Info (12128): Elaborating entity "convolucao" for hierarchy "convolucao:conv"
+Warning (10230): Verilog HDL assignment warning at convolucao.v(24): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at convolucao.v(25): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at convolucao.v(26): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at convolucao.v(31): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at convolucao.v(36): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at convolucao.v(37): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at convolucao.v(39): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at convolucao.v(42): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at convolucao.v(47): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at convolucao.v(46): truncated value with size 32 to match size of target (8)
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "res[0]" is stuck at GND
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 1 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/Users/Vinicius/Documents/niospbl3/output_files/niospbl3.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 16 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 1 input pins
+    Info (21059): Implemented 8 output pins
+    Info (21061): Implemented 7 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 60 warnings
+    Info: Peak virtual memory: 4624 megabytes
+    Info: Processing ended: Sat Aug 04 18:40:55 2018
+    Info: Elapsed time: 00:00:31
+    Info: Total CPU time (on all processors): 00:00:26
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/Vinicius/Documents/niospbl3/output_files/niospbl3.map.smsg.
+
+
